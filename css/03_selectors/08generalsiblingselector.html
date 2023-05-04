@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>general sibling selectro</title>
+    <style>
+        /* Given style red color to all span which is next to h3 and it's child of it */
+        h3~span {
+            color: red;
+        }
+
+        /* Given style red color to all paragraph which is next to <img> element it's and child of it */
+        img~p {
+            background-color: aquamarine;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <h3>general sibling selector</h3>
+    <ul>
+        <li> The general sibling combinator (~) separates two selectors and matches all iterations of the second element,</li>
+        <li> That are following the first element (though not necessarily immediately),</li>
+        <li> And are children of the same parent element.</li>
+    </ul>
+    <h2>Example-1</h2>
+    <h3>sibling Selector </h3>
+    <span>SPAN</span>
+    genration
+    <b>BOLD</b>
+    invertor to store power
+    <span>SPAN</span>
+    solar pannel which use genarate electricity
+    <span>SPAN</span>
+    patel pratik
+    <hr>
+    <h2>Example-2</h2>
+    <div>
+        <img width="800" height="500" src="images/20180303_181759.jpg" alt="images of hills">
+        <P>This is the sample image, For learning purpose.</P>
+        <P>This is the sample image, For learning purpose.</P>
+
+        <ul>
+            <li>
+                <!-- This paragraph is child of <li> element not of <img> so its can't get style -->
+                <P>This is the sample image, For learning purpose.</P>
+            </li>
+        </ul>
+        <P>This is the sample image, For learning purpose.</P>
+        <div>
+            <!-- This paragraph is child of <div> element not of <img> so its can't get style -->
+            <P>This is the sample image, For learning purpose.</P>
+        </div>
+    </div>
+</body>
+</html>
